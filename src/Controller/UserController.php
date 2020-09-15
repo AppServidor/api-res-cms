@@ -55,7 +55,7 @@ class UserController extends AbstractController
         //Respuesta por defecto
         $data = array(
             'status' => 'error',
-            'code' => 200,
+            'code' => 400,
             'message' => 'El usuario no se ha creado.',
             'json' => $params
         );
@@ -258,5 +258,5 @@ class UserController extends AbstractController
         return $this->resJson($data);
     }
 
-    
+
 }

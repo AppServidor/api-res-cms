@@ -22,6 +22,11 @@ user_edit:
 
 # RUTAS DE POST #
 
-video:
-    path: /video
-    controller: App\Controller\VideoController::index
+post:
+    path: /post
+    controller: App\Controller\PostController::index
+    methods: [POST]
+post_show:
+    path: /post/show
+    controller: App\Controller\PostController::show
+    methods: [POST]    
