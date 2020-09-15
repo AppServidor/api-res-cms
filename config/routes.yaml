@@ -27,6 +27,10 @@ post:
     controller: App\Controller\PostController::index
     methods: [POST]
 post_show:
-    path: /post/show
+    path: /{slug}
     controller: App\Controller\PostController::show
-    methods: [POST]    
+    methods: [POST] 
+post_new:
+    path: /post/new
+    controller: App\Controller\PostController::new
+    methods: [POST]       

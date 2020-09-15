@@ -45,7 +45,7 @@ class User implements \JsonSerializable
     private $created_at;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $remember_token;
 
