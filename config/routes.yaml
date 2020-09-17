@@ -8,12 +8,12 @@ user:
 user_create:
     path: /user/create
     controller: App\Controller\UserController::create
-    methods: [POST]
+    methods: [POST, GET]
 
 user_login:
     path: /user/login
     controller: App\Controller\UserController::login
-    methods: [POST]
+    methods: [POST, GET]
 
 user_edit:
     path: /user/edit
@@ -33,4 +33,4 @@ post_show:
 post_new:
     path: /post/new
     controller: App\Controller\PostController::new
-    methods: [POST]       
+    methods: [GET]       

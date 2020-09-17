@@ -71,7 +71,12 @@ class UserController extends AbstractController
             $validate_email = $validator->validate($email, [
                 new Email()
             ]);
-
+            $data = array(
+                'status' => 'error',
+                'code' => 400,
+                'message' => 'El usuario no se ha creado 2.',
+                'json' => $params
+            );
 
             if (!empty($email) && count($validate_email) == 0 && !empty($password) && !empty($name) && !empty($surname)) {
                 //Si la validacion es correcta, crear el objeto usuario
@@ -123,7 +128,7 @@ class UserController extends AbstractController
         }
 
         //Hacer respuesta en json
-        return $this->resJson($data);
+        return $this->resJson($json);
     }
 
     public function login(Request $request, JwtAuth $jwt_auth)
